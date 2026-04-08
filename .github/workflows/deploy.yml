@@ -27,7 +27,7 @@ jobs:
       - name: Tests
         run: ./mvnw test
 
-      # 👇 SOLO si todo pasa
+      # 👇 SOLO si todo pasa.
       - name: Deploy a Render
         if: success()
         run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
